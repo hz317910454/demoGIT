@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.dao.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.entity.User">
+        <id column="Guid" property="Guid" jdbcType="VARCHAR"/>
+        <result column="Name" property="Name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+    select
+         Guid, Name
+    from TBL_Dic
+    order by Guid asc
+  </select>
+
+</mapper>
