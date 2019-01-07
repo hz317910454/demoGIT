@@ -21,4 +21,11 @@ public class UserController {
         objRun.data=userService.getUser();
         return objRun;
     }
+
+    @RequestMapping("/login")
+    public ObjectReturn login(){
+        ObjectReturn objRun=new ObjectReturn();
+        objRun.msg="登陆成功啦";
+        return  objRun;
+    }
 }
